@@ -1,0 +1,14 @@
+body{
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(17,17,17,1) 38%, rgba(16,25,27,1) 45%, rgba(0,212,255,1) 86%);
+    display: flex;
+    justify-content: center; /* horizontally center */
+    align-items: center; /* vertically center */
+    height: 100vh; /* make the body full height of the viewport */
+    margin: 0;
+}
+button{
+    font-size: 80px;
+    background-color: azure;
+    border-radius: 10px;
+}
