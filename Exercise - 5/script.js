@@ -1,26 +1,38 @@
-async function fun(){
-        let p1 = new Promise((resolve, reject) => {
-                setTimeout(() => {
-                        console.log("Initalizing Hack Program ...");
-                }, 1000)
+let a = [
+        "Initializing Hack tool...",
+        "Connecting to Facebook...",
+        "Connecting to server 1...",
+        "Connection failed. Retrying...",
+        "Connecting to server 2",
+        "Connected Successfully...",
+        "Username iamharry...",
+        "Trying Brute Force...",
+        "200K passwords tried...",
+        "Match not found",
+        "Another 200K passwords tried...",
+        "Match not found...",
+        "Another 200K passwords tried...",
+        "Match not found...",
+        "Another 200K passwords tried...",
+        "Match found...",
+        "Accessing Account...",
+        "Hack Successful..."
+]
+
+const sleep = async (seconds) => {
+        return new Promise((resolve, reject) => {
+                setTimeout(() => { resolve(true) }, seconds * 1000)
         })
-        let p2 = new Promise((resolve, reject) => {
-                setTimeout(() => {
-                        console.log("Hacking Raj username.");
-                }, 2000)
-        })
-        let p3 = new Promise((resolve, reject) => {
-                setTimeout(() => {
-                        console.log("Username Found : raj2021")      
-                }, 4000)
-        })
-        let p4 = new Promise((resolve, reject) => {
-                setTimeout(() => {
-                        console.log("Connecting to Facebook...")      
-                }, 6000)
-        })      
 }
-const main1=async()=>{
-        let a=await fun();
+
+const showHack = async (message) => {
+        await sleep(2)
+        // console.log(message)
+        text.innerHTML = text.innerHTML + message + "<br>"
 }
-main1();
+
+(async () => {
+        for (let i = 0; i < a.length; i++) {
+                await showHack(a[i])
+        }
+})()
